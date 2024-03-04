@@ -1,2 +1,2 @@
 # Responsive Vs Adaptive
-Page: 
+Page: https://chrstjan.github.io/Css-Responsive-Vs-Adaptive-Css/
