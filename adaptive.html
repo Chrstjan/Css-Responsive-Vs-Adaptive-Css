@@ -10,41 +10,35 @@
                         <!--Google fonts & fontawesome icons-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
 
-    <title>Responsive Design</title>
+    <title>Adaptive Design</title>
+    <!-- <script src="./Assets/js/app.js" defer></script> -->
 </head>
 <body>
     <style>
- .container {
-    width: 100%;
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 20px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-  }
-  .box {
-    background-color: #f0f0f0;
-    border: 1px solid #ccc;
-    padding: 20px;
-    margin-bottom: 20px;
-  }
-
-  /* This changes the flex-direction & width of the container when the screen gets below 700px */
-  @media (max-width: 700px) {
-    .container {
-        flex-direction: column;
-        max-width: 360px;
-    }
-  }
+         .container {
+            width: 100%;
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+        }
+        .box {
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
     </style>
+
     <header>
         <nav>
             <ul>
-                <li><a href="#">Responsive</a></li>
-                <li><a href="adaptive.html">Adaptive</a></li>
+                <li><a href="index.html">Responsive</a></li>
+                <li><a href="#">Adaptive</a></li>
             </ul>
         </nav>
     </header>
@@ -62,6 +56,25 @@
         </section>
     </main>
     <footer></footer>
-    <script src="./Assets/js/app.js"></script>
+    <script>
+        const container = document.querySelector(".container");
+
+        // This function runs when the window screen gets below 700 px
+        // When the functions runs it changes the flex-direction from row to column
+        // It also changes the max-width to 350px
+        function resizeWindow() {
+            if (window.innerWidth < 700) {
+                container.style.flexDirection = "column";
+                container.style.maxWidth = "350px";
+            } else {
+                container.style.flexDirection = "row";
+                container.style.maxWidth = "960px";
+            }
+        }
+
+        resizeWindow();
+
+        window.addEventListener('resize', resizeWindow);
+    </script>
 </body>
 </html>
