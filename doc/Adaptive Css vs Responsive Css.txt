@@ -1,0 +1,12 @@
+Responsive Css:
+Hvad er responsive css?
+
+Hvad bruger man responsive css til?
+Med Responsive Css bruger man media Queries i sit css stylesheet til at skalere sidens layout til at passe til forksellige devices (mobile, dekstop & tablets)
+
+Usecase:
+Hvad er adaptive css?
+Med adaptive css bruger man flere fixed layouts til at passe til de forskellige devices i stedet for at skalere til at passe til devices.
+Man bruger stadig media Queries men man kan også bruger JavaScript til at ændre html dom elementerne
+
+Usecase:
